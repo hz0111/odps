@@ -39,7 +39,7 @@
 -   order by/sort by/distribute by的key必须是Select语句的输出列，即列的别名。如下所示：
 
     ```
-    select col2 as c from tbl order by col2 limit 100 --不可以，order by的key不是select语句的输出列，即列的别名
+    select col2 as c from tbl order by col1 limit 100 --不可以，order by的key不是select语句的输出列，即列的别名
       select col2 from tbl order by col2 limit 100; -- 可以，当select语句的输出列没有别名时，使用列名作为别名。
     ```
 
